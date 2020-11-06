@@ -1,0 +1,48 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Eduardo Betim\Documents\UFSC\Tarefas\Semestre 2\SD_LAB\aula4\simulation\modelsim
+Econtadorsincrono
+Z1 w1602090562
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
+Z8 dC:\Users\Eduardo Betim\Documents\UFSC\Tarefas\Semestre 2\SD_LAB\aula4\simulation\modelsim
+Z9 8aula4.vho
+Z10 Faula4.vho
+l0
+L34
+VYieJmeGUXn;8:b2gG8cTZ1
+!s100 ;0XLi4M64NKB>3JC_KQI]3
+Z11 OV;C;10.1d;51
+31
+!i10b 1
+Z12 !s108 1602090969.900000
+Z13 !s90 -reportprogress|300|-93|-work|work|aula4.vho|
+Z14 !s107 aula4.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 16 contadorsincrono 0 22 YieJmeGUXn;8:b2gG8cTZ1
+l71
+L55
+VWPkmbO=j_PEHGW4bj[oI63
+!s100 gR[`DO`BF[0<b0R9A64A=2
+R11
+31
+!i10b 1
+R12
+R13
+R14
+R15
+R16

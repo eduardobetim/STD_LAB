@@ -1,0 +1,18 @@
+library IEEE;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+ENTITY somador1bits IS
+	PORT	
+		(A, B, Cin: in std_logic;
+		S, Cout: out std_logic;
+		);
+END somador1bits;
+
+
+architecture full of somador1bits is
+begin
+	Sum <= A xor B xor Cin;
+	Cout <= (A and B) or (Cin and A) or (Cin and B);
+end full; 
+	

@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+
+entity contadorsincrono is
+port(
+	rst,clk:in std_logic;
+	q,qbar:inout std_logic_vector(3 downto 0)
+	);
+end contadorsincrono;
+
+architecture comportamento of contadorsincrono is 
+component flipflopjk is
+port(
+	j,k,rst,clk:in std_logic;
+	q,qbar:out std_logic);
+end component;
+
+
+signal i,j,k:std_logic;
+begin
+i<=q(0);
+j<=q(0) and q(1);
+k<=q(0) and q(1) and q(2);
+a1:jk_ff port map('1','1',rst,clk,q(0),qbar(0));
+a2:jk_ff port map(i,i,rst,clk,q(1),qbar(1));
+a3:jk_ff port map(j,j,rst,clk,q(2),qbar(2));
+a4:jk_ff port map(k,k,rst,clk,q(3),qbar(3));
+end comportamento;
+

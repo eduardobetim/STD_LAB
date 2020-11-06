@@ -1,0 +1,37 @@
+|cafezinho
+clk => saldo[0].CLK
+clk => saldo[1].CLK
+clk => saldo[2].CLK
+clk => saldo[3].CLK
+clk => saldo[4].CLK
+clk => limpa_saldo.CLK
+clk => inc1.CLK
+clk => inc2.CLK
+clk => estado~6.DATAIN
+rst => saldo[0].ACLR
+rst => saldo[1].ACLR
+rst => saldo[2].ACLR
+rst => saldo[3].ACLR
+rst => saldo[4].ACLR
+rst => estado~8.DATAIN
+rst => inc2.ENA
+rst => inc1.ENA
+rst => limpa_saldo.ENA
+e100 => estado.OUTPUTSELECT
+e100 => estado.OUTPUTSELECT
+e100 => estado.OUTPUTSELECT
+e100 => estado.OUTPUTSELECT
+e100 => estado.OUTPUTSELECT
+e50 => estado.OUTPUTSELECT
+e50 => estado.OUTPUTSELECT
+e50 => estado.OUTPUTSELECT
+e50 => estado.OUTPUTSELECT
+e50 => estado.OUTPUTSELECT
+ok => estado.OUTPUTSELECT
+ok => estado.OUTPUTSELECT
+ok => estado.OUTPUTSELECT
+ok => estado.OUTPUTSELECT
+ok => estado.OUTPUTSELECT
+libera_cafe <= libera_cafe.DB_MAX_OUTPUT_PORT_TYPE
+
+

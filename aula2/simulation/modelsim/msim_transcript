@@ -1,0 +1,64 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do exercicios_aula_2_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {exercicios_aula_2.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneii_atom_pack
+# -- Loading package cycloneii_components
+# -- Compiling entity decod7segmentos
+# -- Compiling architecture structure of decod7segmentos
+# 
+# Load canceled
+vsim work.decod7segmentos
+# vsim work.decod7segmentos 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading cycloneii.cycloneii_atom_pack(body)
+# Loading cycloneii.cycloneii_components
+# Loading work.decod7segmentos(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneii.cycloneii_io(structure)
+# Loading cycloneii.cycloneii_mux21(altvital)
+# Loading cycloneii.cycloneii_dffe(behave)
+# Loading cycloneii.cycloneii_asynch_io(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+add wave -position end  sim:/decod7segmentos/E
+add wave -position end  sim:/decod7segmentos/S
+do simuldecod.do
+# Cannot open macro file: simuldecod.do
+do simulardecod.do
+run 160 ns
+# ** Note: (vish-4074) File C:/Users/Eduardo Betim/Documents/UFSC/Tarefas/Semestre 2/SD_LAB/aula2/simulation/modelsim/vsim.wlf is still open, viewing file in live viewing mode.
+# 
+do simulardecod.do
+# ** Error: (vsim-3462) Value/time pairs must be listed in increasing time order.
+# Error in macro ./simulardecod.do line 1
+# ** Error: (vsim-3462) Value/time pairs must be listed in increasing time order.
+# 
+#     while executing
+# "force -freeze /E 0000 0 ns, 0001 20 ns, 0010 40 ns, 0011 60, 0100 80 ns, 0101 100 ns, 0110 120 ns -r 140 ns"
+do simulardecod.do
+# ** Error: (vsim-3462) Value/time pairs must be listed in increasing time order.
+# Error in macro ./simulardecod.do line 1
+# ** Error: (vsim-3462) Value/time pairs must be listed in increasing time order.
+# 
+#     while executing
+# "force -freeze /E 0000 0 ns, 0001 20 ns, 0010 40 ns, 0011 60, 0100 80 ns, 0101 100 ns, 0110 120 ns -r 140 ns"
+run 160 ns

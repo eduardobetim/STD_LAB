@@ -1,0 +1,48 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Eduardo Betim\Documents\UFSC\Tarefas\Semestre 2\SD_LAB\aula2\simulation\modelsim
+Edecod7segmentos
+Z1 w1600893824
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 zUjlM<IUJVWSWg:L2<>ic3
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DPx9 cycloneii 20 cycloneii_components 0 22 h@gSJ;Al32oYg[7^PbnAR0
+Z8 dC:\Users\Eduardo Betim\Documents\UFSC\Tarefas\Semestre 2\SD_LAB\aula2\simulation\modelsim
+Z9 8exercicios_aula_2.vho
+Z10 Fexercicios_aula_2.vho
+l0
+L34
+VFhjWmLB3RjdgP`jKRCDON3
+!s100 kiG>BenUAdfzPQPz=E28:2
+Z11 OV;C;10.1d;51
+31
+!i10b 1
+Z12 !s108 1600894810.445000
+Z13 !s90 -reportprogress|300|-93|-work|work|exercicios_aula_2.vho|
+Z14 !s107 exercicios_aula_2.vho|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 15 decod7segmentos 0 22 FhjWmLB3RjdgP`jKRCDON3
+l78
+L55
+VNdnfjE0f`B;DJAi16:_nT2
+!s100 eD`55KEPDokj?GgJKKMgg0
+R11
+31
+!i10b 1
+R12
+R13
+R14
+R15
+R16

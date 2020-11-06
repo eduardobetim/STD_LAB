@@ -1,0 +1,49 @@
+|contadorsincrono
+j => flipflopjk:a1.j
+k => flipflopjk:a1.k
+rst => flipflopjk:a1.rst
+rst => flipflopjk:a2.rst
+rst => flipflopjk:a3.rst
+rst => flipflopjk:a4.rst
+clk => flipflopjk:a1.clk
+clk => flipflopjk:a2.clk
+clk => flipflopjk:a3.clk
+clk => flipflopjk:a4.clk
+q[0] <= flipflopjk:a1.q
+q[1] <= flipflopjk:a2.q
+q[2] <= flipflopjk:a3.q
+q[3] <= flipflopjk:a4.q
+
+
+|contadorsincrono|flipflopjk:a1
+j => ~NO_FANOUT~
+k => ~NO_FANOUT~
+rst => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+q <= <GND>
+
+
+|contadorsincrono|flipflopjk:a2
+j => ~NO_FANOUT~
+k => ~NO_FANOUT~
+rst => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+q <= <GND>
+
+
+|contadorsincrono|flipflopjk:a3
+j => ~NO_FANOUT~
+k => ~NO_FANOUT~
+rst => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+q <= <GND>
+
+
+|contadorsincrono|flipflopjk:a4
+j => ~NO_FANOUT~
+k => ~NO_FANOUT~
+rst => ~NO_FANOUT~
+clk => ~NO_FANOUT~
+q <= <GND>
+
+

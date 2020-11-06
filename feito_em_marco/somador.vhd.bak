@@ -1,0 +1,32 @@
+library IEEE;
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+ENTITY somador4bits IS
+	port
+		(A, B: in std_logic_vector (3 downto 0);
+		Cin : in std_logic;
+		S: out std_logic_vector(3 downto 0);
+		Cout: out std_logic
+		);
+END somador4bits;
+
+
+architecture soma of somador4bits is
+signal c: std_logic_vector(3 downto 1);
+
+component somador1bit is
+	PORT	
+		(A, B, Cin: in std_logic;
+		S, Cout: out std_logic;
+		);
+end component;
+
+
+begin
+	FA0: somador1bit port map(A0, B0, c0, S0, c1);
+	FA1: somador1bit port map(A1, B1, c1, S1, c2);
+	FA2: somador1bit port map(A2, B2, c2, S2, c3);
+	FA3: somador1bit port map(A3, B3, c3, S3, c4);
+end soma; 
+	

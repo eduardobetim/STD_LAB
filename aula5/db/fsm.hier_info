@@ -1,0 +1,11 @@
+|fsm_mealy_aula
+clk => estado~2.DATAIN
+rst => estado~4.DATAIN
+entrada => Selector0.IN2
+entrada => Selector1.IN2
+entrada => saida.DATAB
+entrada => estado.DATAB
+entrada => Selector0.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+

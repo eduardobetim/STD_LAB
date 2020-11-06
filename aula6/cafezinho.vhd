@@ -1,0 +1,76 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity cafezinho is
+	port(clk, rst: in std_logic;
+			e100, e50: in std_logic;
+			ok: in std_logic;
+			libera_cafe: out std_logic
+		);
+end cafezinho;
+
+architecture fsm of cafezinho is
+
+type tipo_estado is (IDLE, ACC50, ACC100, CHECK, PREP);
+
+signal estado: tipo_estado;
+signal saldo: unsigned(4 downto 0);
+--signal contador: unsigned(3 downto 0);
+signal inc1, inc2, limpa_saldo: std_logic;
+begin
+ --parte de controle
+	process(rst, clk)
+	begin
+		if rst = '1' then
+			estado <= IDLE;
+		elsif clk'event and clk = '1' then
+			case estado is
+				when IDLE =>
+					inc2 <= '0';
+					inc1 <= '0';
+					
+					if ok = '1' then
+						estado <= CHECK;
+					elsif e100 = '1' then
+						estado <= ACC100;
+					elsif e50 = '1' then
+						estado <= ACC50;
+					end if;
+				when ACC50 =>
+					INC1 <= '1';
+					estado <= IDLE;
+				when ACC100 =>
+					inc2 <= '1';
+					estado <= IDLE;
+				when CHECK =>
+					if saldo >= 8 then
+						estado <= PREP;
+					else
+						estado <= IDLE;
+					end if;
+				when PREP =>
+					limpa_saldo <= '1';
+					estado <= IDLE;
+			end case;
+		end if;
+	end process;
+	
+	process (clk, rst)
+	begin
+		if rst = '1' then
+			saldo <= (others => '0');
+		elsif clk'event and clk = '1' then
+			if inc1 = '1' then
+				saldo <= saldo + 1;
+			elsif inc2 = '1' then
+				saldo <= saldo + 2;
+			elsif limpa_saldo = '1' then
+				saldo <= (others => '0');
+			end if;
+		end if;
+	end process;
+
+	libera_cafe <= '1' when estado = PREP else '0';
+	
+end architecture;					

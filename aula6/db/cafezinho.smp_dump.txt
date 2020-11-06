@@ -1,0 +1,8 @@
+
+State Machine - |cafezinho|estado
+Name estado.PREP estado.CHECK estado.ACC100 estado.ACC50 estado.IDLE 
+estado.IDLE 0 0 0 0 0 
+estado.ACC50 0 0 0 1 1 
+estado.ACC100 0 0 1 0 1 
+estado.CHECK 0 1 0 0 1 
+estado.PREP 1 0 0 0 1 

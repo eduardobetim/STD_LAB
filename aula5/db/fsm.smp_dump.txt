@@ -1,0 +1,6 @@
+
+State Machine - |fsm_mealy_aula|estado
+Name estado.sf estado.s1 estado.S 
+estado.S 0 0 0 
+estado.s1 0 1 1 
+estado.sf 1 0 1 
