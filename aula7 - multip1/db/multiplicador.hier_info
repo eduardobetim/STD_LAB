@@ -1,7 +1,7 @@
 |multiplicador
+reset => bc:bc1.Reset
 clk => bc:bc1.clk
 clk => bo:bo1.clk
-reset => bc:bc1.Reset
 inicio => bc:bc1.inicio
 entA[0] => bo:bo1.entA[0]
 entA[1] => bo:bo1.entA[1]
@@ -19,23 +19,27 @@ saida[3] <= bo:bo1.saida[3]
 
 
 |multiplicador|bc:bc1
-Reset => state~3.DATAIN
-clk => state~1.DATAIN
-inicio => state.DATAB
+Reset => state~9.DATAIN
+clk => state~7.DATAIN
+inicio => Selector1.IN3
 inicio => Selector0.IN2
 Az => process_0.IN0
+Az => process_0.IN0
+Bz => process_0.IN1
 Bz => process_0.IN1
 pronto <= pronto.DB_MAX_OUTPUT_PORT_TYPE
 ini <= ini.DB_MAX_OUTPUT_PORT_TYPE
 CA <= CA.DB_MAX_OUTPUT_PORT_TYPE
 dec <= dec.DB_MAX_OUTPUT_PORT_TYPE
 CP <= CP.DB_MAX_OUTPUT_PORT_TYPE
+CMult <= CMult.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |multiplicador|bo:bo1
 clk => registrador_r:regP.clk
 clk => registrador:regA.clk
 clk => registrador:regB.clk
+clk => registrador:regMult.clk
 ini => mux2para1:mux1.sel
 ini => registrador_r:regP.reset
 ini => registrador:regB.carga
@@ -44,6 +48,7 @@ CA => registrador:regA.carga
 dec => mux2para1:mux2.sel
 dec => mux2para1:mux3.sel
 dec => somadorsubtrator:somasub.op
+CMult => registrador:regMult.carga
 entA[0] => mux2para1:mux1.b[0]
 entA[1] => mux2para1:mux1.b[1]
 entA[2] => mux2para1:mux1.b[2]
@@ -54,18 +59,10 @@ entB[2] => registrador:regB.d[2]
 entB[3] => registrador:regB.d[3]
 Az <= igualazero:geraAz.igual
 Bz <= igualazero:geraBz.igual
-saida[0] <= registrador_r:regP.q[0]
-saida[1] <= registrador_r:regP.q[1]
-saida[2] <= registrador_r:regP.q[2]
-saida[3] <= registrador_r:regP.q[3]
-conteudoA[0] <= conteudoA[0].DB_MAX_OUTPUT_PORT_TYPE
-conteudoA[1] <= conteudoA[1].DB_MAX_OUTPUT_PORT_TYPE
-conteudoA[2] <= conteudoA[2].DB_MAX_OUTPUT_PORT_TYPE
-conteudoA[3] <= conteudoA[3].DB_MAX_OUTPUT_PORT_TYPE
-conteudoB[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-conteudoB[1] <= conteudoB[1].DB_MAX_OUTPUT_PORT_TYPE
-conteudoB[2] <= conteudoB[2].DB_MAX_OUTPUT_PORT_TYPE
-conteudoB[3] <= conteudoB[3].DB_MAX_OUTPUT_PORT_TYPE
+saida[0] <= registrador:regMult.q[0]
+saida[1] <= registrador:regMult.q[1]
+saida[2] <= registrador:regMult.q[2]
+saida[3] <= registrador:regMult.q[3]
 
 
 |multiplicador|bo:bo1|mux2para1:mux1
@@ -130,6 +127,25 @@ q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |multiplicador|bo:bo1|registrador:regB
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+carga => q[0]~reg0.ENA
+carga => q[1]~reg0.ENA
+carga => q[2]~reg0.ENA
+carga => q[3]~reg0.ENA
+d[0] => q[0]~reg0.DATAIN
+d[1] => q[1]~reg0.DATAIN
+d[2] => q[2]~reg0.DATAIN
+d[3] => q[3]~reg0.DATAIN
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplicador|bo:bo1|registrador:regMult
 clk => q[0]~reg0.CLK
 clk => q[1]~reg0.CLK
 clk => q[2]~reg0.CLK

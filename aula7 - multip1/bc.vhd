@@ -5,7 +5,7 @@ ENTITY bc IS
 PORT (Reset, clk, inicio : IN STD_LOGIC;
       Az, Bz : IN STD_LOGIC;
       pronto : OUT STD_LOGIC;
-      ini, CA, dec, CP: OUT STD_LOGIC );
+      ini, CA, dec, CP, CMult: OUT STD_LOGIC );
 END bc;
 
 -- Sinais de comando
@@ -16,7 +16,7 @@ END bc;
 
 
 ARCHITECTURE estrutura OF bc IS
-        TYPE state_type IS (S0, S1, S2, S3, S4, S5 );
+        TYPE state_type IS (S0, S1, S2, S3, S4, S5);
         SIGNAL state: state_type;
 BEGIN
         -- Logica de proximo estado (e registrador de estado)
@@ -35,10 +35,10 @@ BEGIN
                                 WHEN S1 =>
                                         state <= S2;
                                 WHEN S2 =>
-                                        if Az = '1' or Bz = '1' then
-                                                state <= S5;
-                                        else
+                                        if (not Az and not Bz) = '1' then
                                                 state <= S3;
+                                        elsif (Az or Bz) = '1' then
+																state <= S5;
                                         end if;
                                 WHEN S3 =>
                                         state <= S4;
@@ -61,6 +61,7 @@ BEGIN
                                 dec <= '0';
                                 CP <= '0';
                                 pronto <= '0';
+										  CMult <= '0';
                                 
                         WHEN S1 =>
                                 ini <= '1';
@@ -68,13 +69,15 @@ BEGIN
                                 dec <= '0';
                                 CP <= '0';
                                 pronto <= '0';
-                                
+                                CMult <= '0';
+										  
                         WHEN S2 =>
                                 ini <= '0';
                                 CA <= '0';
                                 dec <= '0';
                                 CP <= '0';
                                 pronto <= '0';
+										  CMult <= '0';
                                 
                         WHEN S3 =>
                                 ini <= '0';
@@ -82,6 +85,7 @@ BEGIN
                                 dec <= '0';
                                 CP <= '1';
                                 pronto <= '0';
+										  CMult <= '0';
                                 
                         WHEN S4 =>
                                 ini <= '0';
@@ -89,6 +93,7 @@ BEGIN
                                 dec <= '1';
                                 CP <= '0';
                                 pronto <= '0';
+										  CMult <= '0';
                                 
                         WHEN S5 =>
                                 ini <= '0';
@@ -96,6 +101,7 @@ BEGIN
                                 dec <= '0';
                                 CP <= '0';
                                 pronto <= '1';
+										  CMult <= '1';
                                 
                 END CASE;
         END PROCESS;

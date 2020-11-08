@@ -4,10 +4,10 @@ USE ieee.std_logic_unsigned.all;
 
 ENTITY bo IS
 PORT (clk : IN STD_LOGIC;
-ini, CP, CA, dec : IN STD_LOGIC;
+ini, CP, CA, dec, CMult: IN STD_LOGIC;
 entA, entB : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 Az, Bz : OUT STD_LOGIC;
-saida, conteudoA, conteudoB : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
+saida: OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 END bo;
 
 -- Sinais de comando
@@ -47,22 +47,20 @@ PORT (a : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 igual : OUT STD_LOGIC);
 END COMPONENT;
 
-SIGNAL saimux1, saimux2, saimux3, sairegP, sairegA, sairegB, saisomasub: STD_LOGIC_VECTOR (3 DOWNTO 0);
+SIGNAL saimux1, saimux2, saimux3, sairegP, sairegmult, sairegA, sairegB, saisomasub: STD_LOGIC_VECTOR (3 DOWNTO 0);
 
 BEGIN
 mux1: mux2para1 PORT MAP (saisomasub, entA, ini, saimux1);
 regP: registrador_r PORT MAP (clk, ini, CP, saisomasub, sairegP);
 regA: registrador PORT MAP (clk, CA, saimux1, sairegA);
 regB: registrador PORT MAP (clk, ini, entB, sairegB);
+regMult: registrador PORT MAP (clk, CMult, sairegP, sairegmult);
 mux2: mux2para1 PORT MAP (sairegP, sairegA, dec, saimux2);
-mux3: mux2para1 PORT MAP (sairegB, "1111", dec, saimux3);
+mux3: mux2para1 PORT MAP (sairegB, "0001", dec, saimux3);
 somasub: somadorsubtrator PORT MAP (saimux2, saimux3, dec, saisomasub);
 geraAz: igualazero PORT MAP (sairegA, Az);
 geraBz: igualazero PORT MAP (sairegB, Bz);
 
-saida <= sairegP;
---essas proximas linhas sao desnecessarias
---conteudoA <= sairegA;
---conteudoB <= sairegB;
+saida <= sairegmult;
 
 END estrutura;
