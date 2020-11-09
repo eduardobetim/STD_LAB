@@ -20,20 +20,6 @@ saida[3] <= bo:bo1.REGSAIDA[3]
 
 |multiplicador|bc:bc1
 Reset => state~8.DATAIN
-Reset => MA~reg0.ENA
-Reset => pronto~reg0.ENA
-Reset => CA~reg0.ENA
-Reset => CP~reg0.ENA
-Reset => CB~reg0.ENA
-Reset => CMULT~reg0.ENA
-Reset => MP~reg0.ENA
-clk => MA~reg0.CLK
-clk => MP~reg0.CLK
-clk => CMULT~reg0.CLK
-clk => CB~reg0.CLK
-clk => CP~reg0.CLK
-clk => CA~reg0.CLK
-clk => pronto~reg0.CLK
 clk => state~6.DATAIN
 inicio => Selector1.IN3
 inicio => Selector0.IN2
@@ -41,13 +27,13 @@ Az => process_0.IN0
 Az => process_0.IN0
 Bz => process_0.IN1
 Bz => process_0.IN1
-pronto <= pronto~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CA <= CA~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CP <= CP~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CB <= CB~reg0.DB_MAX_OUTPUT_PORT_TYPE
-CMULT <= CMULT~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MP <= MP~reg0.DB_MAX_OUTPUT_PORT_TYPE
-MA <= MA~reg0.DB_MAX_OUTPUT_PORT_TYPE
+pronto <= pronto.DB_MAX_OUTPUT_PORT_TYPE
+CA <= CA.DB_MAX_OUTPUT_PORT_TYPE
+CP <= CP.DB_MAX_OUTPUT_PORT_TYPE
+CB <= CB.DB_MAX_OUTPUT_PORT_TYPE
+CMULT <= CMULT.DB_MAX_OUTPUT_PORT_TYPE
+MP <= MP.DB_MAX_OUTPUT_PORT_TYPE
+MA <= MA.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |multiplicador|bo:bo1

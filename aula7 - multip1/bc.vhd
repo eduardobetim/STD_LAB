@@ -5,7 +5,7 @@ ENTITY bc IS
 PORT (Reset, clk, inicio : IN STD_LOGIC;
       Az, Bz : IN STD_LOGIC;
       pronto : OUT STD_LOGIC;
-      ini, CA, dec, CP, CMult: OUT STD_LOGIC );
+      ini, CA, dec, CP: OUT STD_LOGIC );
 END bc;
 
 -- Sinais de comando
@@ -61,7 +61,6 @@ BEGIN
                                 dec <= '0';
                                 CP <= '0';
                                 pronto <= '0';
-										  CMult <= '0';
                                 
                         WHEN S1 =>
                                 ini <= '1';
@@ -69,7 +68,6 @@ BEGIN
                                 dec <= '0';
                                 CP <= '0';
                                 pronto <= '0';
-                                CMult <= '0';
 										  
                         WHEN S2 =>
                                 ini <= '0';
@@ -77,7 +75,6 @@ BEGIN
                                 dec <= '0';
                                 CP <= '0';
                                 pronto <= '0';
-										  CMult <= '0';
                                 
                         WHEN S3 =>
                                 ini <= '0';
@@ -85,7 +82,6 @@ BEGIN
                                 dec <= '0';
                                 CP <= '1';
                                 pronto <= '0';
-										  CMult <= '0';
                                 
                         WHEN S4 =>
                                 ini <= '0';
@@ -93,7 +89,6 @@ BEGIN
                                 dec <= '1';
                                 CP <= '0';
                                 pronto <= '0';
-										  CMult <= '0';
                                 
                         WHEN S5 =>
                                 ini <= '0';
@@ -101,7 +96,6 @@ BEGIN
                                 dec <= '0';
                                 CP <= '0';
                                 pronto <= '1';
-										  CMult <= '1';
                                 
                 END CASE;
         END PROCESS;

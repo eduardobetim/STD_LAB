@@ -25,7 +25,7 @@ begin
 		
 	 reset <= '1', '0' after 10 ns;
 	 inicio <= '1' after 20 ns, '0' after 40 ns;
-	 entA <= "0011";
+	 entA <= "0010";
 	 entB <= "0100";
 	 
 	 -- processo gerador de clock
