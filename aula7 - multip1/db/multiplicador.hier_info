@@ -16,6 +16,14 @@ saida[0] <= bo:bo1.saida[0]
 saida[1] <= bo:bo1.saida[1]
 saida[2] <= bo:bo1.saida[2]
 saida[3] <= bo:bo1.saida[3]
+conteudoA[0] <= bo:bo1.saidaA[0]
+conteudoA[1] <= bo:bo1.saidaA[1]
+conteudoA[2] <= bo:bo1.saidaA[2]
+conteudoA[3] <= bo:bo1.saidaA[3]
+conteudoB[0] <= bo:bo1.saidaB[0]
+conteudoB[1] <= bo:bo1.saidaB[1]
+conteudoB[2] <= bo:bo1.saidaB[2]
+conteudoB[3] <= bo:bo1.saidaB[3]
 
 
 |multiplicador|bc:bc1
@@ -60,6 +68,14 @@ saida[0] <= registrador_r:regP.q[0]
 saida[1] <= registrador_r:regP.q[1]
 saida[2] <= registrador_r:regP.q[2]
 saida[3] <= registrador_r:regP.q[3]
+saidaA[0] <= registrador:regA.q[0]
+saidaA[1] <= registrador:regA.q[1]
+saidaA[2] <= registrador:regA.q[2]
+saidaA[3] <= registrador:regA.q[3]
+saidaB[0] <= registrador:regB.q[0]
+saidaB[1] <= registrador:regB.q[1]
+saidaB[2] <= registrador:regB.q[2]
+saidaB[3] <= registrador:regB.q[3]
 
 
 |multiplicador|bo:bo1|mux2para1:mux1

@@ -42,9 +42,6 @@ vsim work.multiplicador_tb
 # Loading cycloneii.cycloneii_atom_pack(body)
 # Loading cycloneii.cycloneii_components
 # Loading work.multiplicador(structure)
-# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
-# Loading cycloneii.cycloneii_and1(altvital)
-# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneii.cycloneii_io(structure)
 # Loading cycloneii.cycloneii_mux21(altvital)
@@ -52,7 +49,12 @@ vsim work.multiplicador_tb
 # Loading cycloneii.cycloneii_asynch_io(behave)
 # Loading cycloneii.cycloneii_clkctrl(vital_clkctrl)
 # Loading cycloneii.cycloneii_ena_reg(behave)
+# Loading cycloneii.cycloneii_lcell_comb(vital_lcell_comb)
+# Loading cycloneii.cycloneii_lcell_ff(vital_lcell_ff)
+# Loading cycloneii.cycloneii_and1(altvital)
 add wave -position insertpoint  \
+sim:/multiplicador_tb/ConteudoA \
+sim:/multiplicador_tb/ConteudoB \
 sim:/multiplicador_tb/clk \
 sim:/multiplicador_tb/entA \
 sim:/multiplicador_tb/entB \
@@ -60,6 +62,4 @@ sim:/multiplicador_tb/inicio \
 sim:/multiplicador_tb/pronto \
 sim:/multiplicador_tb/reset \
 sim:/multiplicador_tb/saida
-run 720 ns
-restart -f -nolist -nolog -nobreak -novirtuals -noassertions -nofcovers -noatv
 run 360 ns

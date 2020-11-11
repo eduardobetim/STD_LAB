@@ -1,5 +1,5 @@
 EDA Netlist Writer report for multiplicador
-Mon Nov 09 14:27:13 2020
+Wed Nov 11 15:06:05 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Nov 09 14:27:13 2020 ;
+; EDA Netlist Writer Status ; Successful - Wed Nov 11 15:06:05 2020 ;
 ; Revision Name             ; multiplicador                         ;
 ; Top-level Entity Name     ; multiplicador                         ;
 ; Family                    ; Cyclone II                            ;
@@ -84,13 +84,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Nov 09 14:27:13 2020
+    Info: Processing started: Wed Nov 11 15:06:04 2020
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off multiplicador -c multiplicador
 Info (204026): Generated files "multiplicador.vho", "multiplicador_fast.vho", "multiplicador_vhd.sdo" and "multiplicador_vhd_fast.sdo" in directory "C:/Users/Eduardo Betim/Documents/Repo-UFSC/STD_LAB/aula8 - multip2/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4527 megabytes
-    Info: Processing ended: Mon Nov 09 14:27:13 2020
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Wed Nov 11 15:06:05 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

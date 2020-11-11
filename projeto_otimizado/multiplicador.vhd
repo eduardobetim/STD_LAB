@@ -4,9 +4,9 @@ USE ieee.std_logic_unsigned.all;
 
 ENTITY multiplicador IS
 PORT (clk, reset, inicio : IN STD_LOGIC;
-		entA, entB : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		entA, entB : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		pronto: OUT STD_LOGIC;
-		saida : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
+		saida : OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
 END multiplicador;
 
 ARCHITECTURE estrutura of multiplicador IS
@@ -20,14 +20,14 @@ END COMPONENT;
 COMPONENT bo IS
 PORT (clk : IN STD_LOGIC;
 		CP, CA, MP, MA: IN STD_LOGIC;
-		entA, entB : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+		entA, entB : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 		Az, Bz : OUT STD_LOGIC;
-		REGSAIDA: OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
+		REGSAIDA: OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
 END COMPONENT;
 
-SIGNAL CA, CP, CB, MP, MA: STD_LOGIC; -- Sinais de comando para o BO
-SIGNAL Az, Bz: STD_LOGIC; -- Sinais de comando para o BC
-SIGNAL REGSAIDA: STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL CA, CP, CB, MP, MA: STD_LOGIC; 
+SIGNAL Az, Bz: STD_LOGIC; 
+SIGNAL REGSAIDA: STD_LOGIC_VECTOR(7 DOWNTO 0);
 
 BEGIN
 bc1: bc PORT MAP (reset, clk, inicio, Az, Bz, pronto, CA, CP, MP, MA);

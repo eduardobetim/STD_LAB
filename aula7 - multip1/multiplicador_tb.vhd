@@ -12,28 +12,26 @@ architecture tb of multiplicador_tb is
 	PORT (reset, clk, inicio : IN STD_LOGIC;
 			entA, entB : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
 			pronto: OUT STD_LOGIC;
-			saida : OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
+			saida, conteudoA, conteudoB: OUT STD_LOGIC_VECTOR(3 DOWNTO 0));
 	END COMPONENT;
 
     signal clk, reset, inicio: std_logic;
 	 signal entA, entB: std_logic_vector(3 downto 0);
 	 signal pronto: std_logic;
-	 signal saida: std_logic_vector(3 downto 0);
+	 signal saida, conteudoA, conteudoB: std_logic_vector(3 downto 0);
 begin
-    -- conectando os sinais do test bench aos sinais do fsm
-	 M1: multiplicador port map (reset, clk, inicio, entA, entB, pronto, saida);
+	 M1: multiplicador port map (reset, clk, inicio, entA, entB, pronto, saida, conteudoA, conteudoB);
 		
 	 reset <= '1', '0' after 10 ns;
 	 inicio <= '1' after 20 ns, '0' after 40 ns;
-	 entA <= "0010";
+	 entA <= "0011";
 	 entB <= "0100";
 	 
-	 -- processo gerador de clock
 	 tb1 : process
-        constant periodo: time := 20 ns; -- periodo do clock
+        constant periodo: time := 20 ns;
         begin
 				clk <= '1';
-            wait for periodo/2; -- 50% do periodo pra cada nivel
+            wait for periodo/2;
 				clk <= '0';
 				wait for periodo/2;
         end process;

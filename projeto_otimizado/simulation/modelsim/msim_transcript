@@ -30,8 +30,8 @@ vcom -reportprogress 300 -work work {C:/Users/Eduardo Betim/Documents/Repo-UFSC/
 # -- Loading package NUMERIC_STD
 # -- Compiling entity multiplicador_tb
 # -- Compiling architecture tb of multiplicador_tb
-vsim -voptargs=+acc work.multiplicador_tb
-# vsim -voptargs=+acc work.multiplicador_tb 
+vsim work.multiplicador_tb
+# vsim work.multiplicador_tb 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
