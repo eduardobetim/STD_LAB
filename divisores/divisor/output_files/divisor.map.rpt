@@ -1,5 +1,5 @@
 Analysis & Synthesis report for divisor
-Wed Nov 25 17:01:42 2020
+Fri Nov 27 16:56:06 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 25 17:01:42 2020           ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 27 16:56:06 2020           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; divisor                                         ;
 ; Top-level Entity Name              ; divisor                                         ;
@@ -279,7 +279,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -289,7 +289,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Nov 25 17:01:40 2020
+    Info: Processing started: Fri Nov 27 16:55:55 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off divisor -c divisor
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file comparador.vhd
@@ -340,8 +340,8 @@ Info (21057): Implemented 55 device resources after synthesis - the final resour
     Info (21061): Implemented 34 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4643 megabytes
-    Info: Processing ended: Wed Nov 25 17:01:42 2020
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Fri Nov 27 16:56:06 2020
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:02
 
 

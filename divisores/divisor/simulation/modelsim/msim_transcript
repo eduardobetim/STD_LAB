@@ -55,14 +55,13 @@ vsim work.divisor_tb
 # ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
-add wave -position insertpoint  \
-sim:/divisor_tb/clk \
-sim:/divisor_tb/ent1 \
-sim:/divisor_tb/ent2 \
-sim:/divisor_tb/erro \
-sim:/divisor_tb/inicio \
-sim:/divisor_tb/pronto \
-sim:/divisor_tb/quoc \
-sim:/divisor_tb/reset \
-sim:/divisor_tb/resto
+add wave -position end  sim:/divisor_tb/clk
+add wave -position end  sim:/divisor_tb/ent1
+add wave -position end  sim:/divisor_tb/ent2
+add wave -position end  sim:/divisor_tb/erro
+add wave -position end  sim:/divisor_tb/inicio
+add wave -position end  sim:/divisor_tb/pronto
+add wave -position end  sim:/divisor_tb/quoc
+add wave -position end  sim:/divisor_tb/reset
+add wave -position end  sim:/divisor_tb/resto
 run 360 ns

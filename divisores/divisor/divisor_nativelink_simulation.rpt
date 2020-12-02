@@ -18,7 +18,7 @@ Sim dir               :  simulation\modelsim
 
 Info: Starting NativeLink simulation with ModelSim-Altera software
 Sourced NativeLink script c:/altera/13.0sp1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File divisor_run_msim_gate_vhdl.do already exists - backing up current file as divisor_run_msim_gate_vhdl.do.bak3
+Warning: File divisor_run_msim_gate_vhdl.do already exists - backing up current file as divisor_run_msim_gate_vhdl.do.bak4
 Probing transcript
 ModelSim-Altera Info: # Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
 ModelSim-Altera Info: # do divisor_run_msim_gate_vhdl.do 
@@ -77,15 +77,14 @@ ModelSim-Altera Info: # Loading cycloneii.cycloneii_and1(altvital)
 ModelSim-Altera Warning: # ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
 ModelSim-Altera Info: # This may because you are loading cell libraries which are not recommended with
 ModelSim-Altera Info: # the ModelSim Altera version. Expect performance to be adversely affected.
-ModelSim-Altera Info: add wave -position insertpoint  \
-ModelSim-Altera Info: sim:/divisor_tb/clk \
-ModelSim-Altera Info: sim:/divisor_tb/ent1 \
-ModelSim-Altera Info: sim:/divisor_tb/ent2 \
-ModelSim-Altera Info: sim:/divisor_tb/erro \
-ModelSim-Altera Info: sim:/divisor_tb/inicio \
-ModelSim-Altera Info: sim:/divisor_tb/pronto \
-ModelSim-Altera Info: sim:/divisor_tb/quoc \
-ModelSim-Altera Info: sim:/divisor_tb/reset \
-ModelSim-Altera Info: sim:/divisor_tb/resto
+ModelSim-Altera Info: add wave -position end  sim:/divisor_tb/clk
+ModelSim-Altera Info: add wave -position end  sim:/divisor_tb/ent1
+ModelSim-Altera Info: add wave -position end  sim:/divisor_tb/ent2
+ModelSim-Altera Info: add wave -position end  sim:/divisor_tb/erro
+ModelSim-Altera Info: add wave -position end  sim:/divisor_tb/inicio
+ModelSim-Altera Info: add wave -position end  sim:/divisor_tb/pronto
+ModelSim-Altera Info: add wave -position end  sim:/divisor_tb/quoc
+ModelSim-Altera Info: add wave -position end  sim:/divisor_tb/reset
+ModelSim-Altera Info: add wave -position end  sim:/divisor_tb/resto
 ModelSim-Altera Info: run 360 ns
 Info: NativeLink simulation flow was successful
