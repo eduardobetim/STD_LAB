@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for divisor
-Thu Dec 03 08:51:38 2020
+Wed Dec 09 18:07:30 2020
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -1231,7 +1231,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Dec 03 08:51:36 2020
+    Info: Processing started: Wed Dec 09 18:07:29 2020
 Info: Command: quartus_sta divisor -c divisor
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1280,8 +1280,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4544 megabytes
-    Info: Processing ended: Thu Dec 03 08:51:38 2020
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Wed Dec 09 18:07:30 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
